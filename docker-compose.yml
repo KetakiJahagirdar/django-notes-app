@@ -12,7 +12,7 @@ services:
       - django_app
     networks:
       - jenkins-net:
-    external: true
+          external: true
 
   django_app:
     build:
@@ -35,7 +35,7 @@ services:
       start_period: 30s
     networks:
       - jenkins-net:
-    external: true
+          external: true
 
   db:
     image: mysql
@@ -53,7 +53,7 @@ services:
       start_period: 60s
     networks:
       - jenkins-net:
-    external: true
+          external: true
 
 networks:
   jenkins-net:
